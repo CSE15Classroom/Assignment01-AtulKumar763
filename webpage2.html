@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Layout 2</title>
+  <style>
+    /* Reset basics */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* page background and centering the layout card */
+    body {
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* outer card (like the pink framed area in the picture) */
+    .card {
+      width: 360px;               /* change width if you want bigger/smaller */
+      border: 6px solid #26221f;
+      background: #ffeef0;        /* pale pink fill */
+      padding: 10px;
+      display: grid;
+      gap: 10px;
+      grid-template-rows: auto auto 1fr auto; /* header, nav, main, footer */
+      height: 620px;              /* fixed height like picture */
+    }
+
+    /* Grid for main content: left column stacked section + article, right aside */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 120px; /* left flexible, right fixed like image */
+      gap: 10px;
+      align-content: start;
+    }
+
+    /* left column stacks */
+    .left {
+      display: grid;
+      grid-auto-rows: 1fr auto;   /* section takes available, article smaller */
+      gap: 10px;
+    }
+
+    /* shared box style for semantic elements */
+    header, nav, section, article, aside, footer {
+      border: 3px solid rgba(38,34,31,0.9);
+      padding: 16px;
+      text-align: center;
+      font-weight: 600;
+      color: #000000;
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* sizing cues to match the picture proportions */
+    header { height: 56px; display:flex; align-items:center; justify-content:center; }
+    nav    { height: 56px; display:flex; align-items:center; justify-content:center; }
+    section { min-height: 180px; display:flex; align-items:center; justify-content:center; }
+    article { min-height: 120px; display:flex; align-items:center; justify-content:center; }
+    aside   { display:flex; align-items:center; justify-content:center; }
+    footer  { height: 56px; display:flex; align-items:center; justify-content:center; }
+
+    /* make aside fill both left stacked boxes height-wise like picture */
+    aside {
+      /* stretch to match combined heights of section+article plus gaps */
+      align-self: stretch;
+    }
+
+    /* small responsive tweak: on narrow screens stack aside under left column */
+    @media (max-width: 420px) {
+      .card { width: 100%; height: auto; }
+      main { grid-template-columns: 1fr; }
+      aside { order: 3; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="region" aria-label="Layout example">
+    <header>&lt;header&gt;</header>
+    <nav>&lt;nav&gt;</nav>
+
+    <main>
+      <div class="left">
+        <section>&lt;section&gt;</section>
+        <article>&lt;article&gt;</article>
+      </div>
+
+      <aside>&lt;aside&gt;</aside>
+    </main>
+
+    <footer>&lt;footer&gt;</footer>
+  </div>
+</body>
+</html>
