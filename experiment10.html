@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopEase</title>
+<!-- .... -->
+<style>
+    body {
+        background-color: rgb(206, 206, 206);
+        margin: 0;
+        font-family: Georgia, serif;
+    }
+
+    .navbar {
+        background: #222;
+        color: white;
+        padding: 15px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .nav-links {
+        display: flex;
+        gap: 25px;
+    }
+
+    .nav-links a,
+    .right-menu a {
+        text-decoration: none;
+        color: rgb(160, 156, 156);
+        font-size: 17px;
+    }
+
+    .right-menu a {
+        margin-left: 18px;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    @media(max-width: 768px) {
+
+     
+        .nav-links {
+            position: absolute;
+            top: 65px;
+            left: 0;
+            width: 100%;
+            background: #333;
+            flex-direction: column;
+            align-items: center;
+            display: none;
+            padding: 20px 0;
+        }
+
+        .nav-links a {
+            padding: 12px 0;
+            font-size: 20px;
+        }
+
+        #menu-toggle:checked + .hamburger + .nav-links {
+            display: flex;
+        }
+
+      
+        .hamburger {
+            display: block;
+            color: white;
+        }
+
+      
+        .right-menu {
+            position: absolute;
+            right: 20px;
+            top: 18px;
+        }
+    }
+
+    .hero {
+        padding: 20px;
+        margin: 10px;
+        border: 2px solid black;
+    }
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">ShopEase</div>
+
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Categories</a>
+        <a href="#">Deals</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="right-menu">
+        <a href="#">Cart 🛒</a>
+        <a href="#">Login</a>
+    </div>
+</header>
+<section class="hero">
+    <h1>Welcome to ShopEase!</h1>
+    <p>Your one-stop destination for all shopping needs.</p>
+</section>
+
+</body>
+</html>
