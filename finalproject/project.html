@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Native Union Style Page</title>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-bar{
+    background:black;
+    color:white;
+    text-align:center;
+    font-size:12px;
+    padding:8px;
+    letter-spacing:1px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 30px; 
+}
+
+header{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.nav{
+    width:100%;
+    height: 30px;
+    margin:auto;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    scroll-behavior: smooth;
+    position: fixed;
+    z-index: 1;
+    background-color: #111;
+    color: #fff;
+}
+
+.logo{
+    font-size:26px;
+    letter-spacing:3px;
+    font-weight:500;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    font-size:14px;
+    color:#555;
+}
+
+.menu span{
+    cursor:pointer;
+}
+
+.hero{
+    background:#eee;
+    background: linear-gradient(to bottom, #fbff18, #f718ff);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:60px;
+    object-fit:cover;
+}
+
+.hero-text{
+    max-width:50%;
+}
+
+.hero-text h1{
+    font-size:48px;
+    letter-spacing:6px;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:18px;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.hero-text button{
+    padding:12px 30px;
+    border:none;
+    background:#555;
+    color:#fff;
+    letter-spacing:2px;
+    cursor:pointer;
+      object-fit:cover;
+    box-shadow: 5px 5px 10px rgb(13, 13, 13);
+    
+}
+
+.hero-img video{
+      width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.categories{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:5px;
+    margin-left: 50px;
+}
+
+.category{
+    position:relative;
+    box-shadow: 5px 5px 10px rgb(13, 13, 13);
+
+}
+
+.category img{
+    width:100%;
+    height:250px;
+    object-fit: contain;
+
+}
+
+.category span{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    color:rgb(0, 0, 0);
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+footer{
+    background:#111;
+    color:#aaa;
+    padding:40px;
+    margin-top:50px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar">
+    FINAL PROJECT OF SEMESTER - 2025 ATUL KUMAR 2025B01010289
+</div>
+
+<header>
+    <div class="nav">
+        <div class="logo">E-COMMERCE TECH GADGETS 🎧</div>
+        <div class="menu">
+            
+            <span><a href="CHARGING"></a>CHARGING</span>
+            <span><a href=""></a>EARPHONE</span>
+            <span><a href=""></a>WATCH</span>
+            <span><a href=""></a>LAPTOP</span>
+            <span><a href=""></a>KEYBOARD</span>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>NEW RELEASE</h1>
+        <p>The TECH Collection</p>
+        <button>DISCOVER</button>
+    </div>
+<div class="hero-img">
+    <video autoplay muted loop controls>
+        <source src="vedio.mp4" type="video/mp4">
+        browser does not support the video tag.
+    </video>
+</div>
+
+
+<section class="categories">
+    <div class="category">
+        <img src="image (1).jpg">
+        <span>WATCHES</span>
+    </div>
+    <div class="category">
+        <img src="image (2).jpg">
+        <span>LASER KEYBOARD</span>
+    </div>
+    <div class="category">
+        <img src="image (17).jpg">
+        <span>LAPTOP</span>
+    </div>
+    <div class="category">
+        <img src="image (4).jpg">
+        <span>LAPTOP</span>
+    </div>
+     <div class="category">
+        <img src="image (5).jpg">
+        <span>GOOGLE PIXEL 10 PRO XL</span>
+    </div>
+    <div class="category">
+        <img src="image (6).jpg">
+        <span>IPAD</span>
+    </div>
+    <div class="category">
+        <img src="image (7).jpg">
+        <span>USB</span>
+    </div>
+    <div class="category">
+        <img src="image (8).jpg">
+        <span>WATCH</span>
+    </div>
+     <div class="category">
+        <img src="image (9).jpg">
+        <span>CAMERA</span>
+    </div>
+    <div class="category">
+        <img src="image (10).jpg">
+        <span>LAPTOP</span>
+    </div>
+    <div class="category">
+        <img src="image (11).jpg">
+        <span>PHONE</span>
+    </div>
+    <div class="category">
+        <img src="image (12).jpg">
+        <span>WATCH</span>
+    </div>
+     <div class="category">
+        <img src="image (13).jpg">
+        <span>EARPHONE</span>
+    </div>
+    <div class="category">
+        <img src="image (14).jpg">
+        <span>EARPHONE</span>
+    </div>
+    <div class="category">
+        <img src="image (15).jpg">
+        <span>EARPHONE</span>
+    </div>
+    <div class="category">
+        <img src="image (16).jpg">
+        <span>SAMSUNG</span>
+    </div>
+</section>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div>© 2025 Native Union</div>
+        <div>® 2000 registered pvt.ltd</div>
+        <div> ™ Privacy • Terms • Support</div>
+    </div>
+</footer>
+
+</body>
+</html>
